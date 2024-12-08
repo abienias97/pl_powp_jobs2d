@@ -4,16 +4,14 @@ import edu.kis.legacy.drawer.panel.DrawPanelController;
 import edu.kis.legacy.drawer.shape.ILine;
 import edu.kis.legacy.drawer.shape.LineFactory;
 import edu.kis.powp.jobs2d.Job2dDriver;
+import edu.kis.powp.jobs2d.features.DrawerFeature;
 
 /**
  * driver adapter to drawer with several bugs.
  */
-public class MyAdapter extends DrawPanelController implements Job2dDriver {
+public class DrawPanelControllerAdapter implements Job2dDriver {
 	private int startX = 0, startY = 0;
-
-	public MyAdapter() {
-		super();
-	}
+	private final DrawPanelController drawController = DrawerFeature.getDrawerController();
 
 	@Override
 	public void setPosition(int x, int y) {
@@ -27,9 +25,7 @@ public class MyAdapter extends DrawPanelController implements Job2dDriver {
 		line.setStartCoordinates(this.startX, this.startY);
 		line.setEndCoordinates(x, y);
 		this.setPosition(x, y);
-		System.out.println("x = "+x+" y = "+y);
-
-		drawLine(line);
+		drawController.drawLine(line);
 	}
 
 	@Override
