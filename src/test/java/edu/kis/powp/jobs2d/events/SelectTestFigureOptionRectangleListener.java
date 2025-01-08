@@ -1,7 +1,6 @@
 package edu.kis.powp.jobs2d.events;
 
 import edu.kis.powp.jobs2d.drivers.DriverManager;
-import edu.kis.powp.jobs2d.drivers.adapter.AbstractDriverAdapter;
 import edu.kis.powp.jobs2d.drivers.command.ComplexCommand;
 import edu.kis.powp.jobs2d.drivers.command.OperateToCommand;
 import edu.kis.powp.jobs2d.drivers.command.SetPositionCommand;
