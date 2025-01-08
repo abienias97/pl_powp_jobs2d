@@ -20,7 +20,7 @@ public class FigureFactory {
         return complexCommand;
     }
 
-    public static ComplexCommand get(Job2dDriver driver) {
+    public static ComplexCommand getFigureScript2(Job2dDriver driver) {
         ComplexCommand complexCommand = new ComplexCommand();
         complexCommand.addCommand(new SetPositionCommand(0, 0, driver));
         complexCommand.addCommand(new OperateToCommand(233, -23, driver));
